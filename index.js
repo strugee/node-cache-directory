@@ -14,3 +14,22 @@
 */
 
 'use strict';
+
+var xdg = require('xdg-basedir');
+var home = require('user-home');
+var path = require('path');
+
+function cacheDir(appName) {
+	switch (process.platform) {
+	case 'win32':
+		return null;
+	case 'darwin':
+		return home ? path.join(home, 'Library/Caches', appName) : null;
+	case 'linux':
+		return xdg.cache ? path.join(xdg.cache, appName) : null;
+	}
+
+	return null;
+}
+
+module.exports = cacheDir;
