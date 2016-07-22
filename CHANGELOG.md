@@ -2,7 +2,7 @@
 
 `cache-directory` follows [Semantic Versioning][1].
 
-## 1.0.0 - 2016-07-14
+## 1.0.0 - 2016-07-22
 
 ### Added
 
