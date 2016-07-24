@@ -22,7 +22,7 @@ var path = require('path');
 function cacheDir(appName) {
 	switch (process.platform) {
 	case 'win32':
-		return process.env.APPDATA ? path.join(process.env.APPDATA, appName) : null;
+		return process.env.APPDATA ? path.join(process.env.APPDATA, appName, 'Caches') : null;
 	case 'darwin':
 		return home ? path.join(home, 'Library/Caches', appName) : null;
 	case 'linux':
