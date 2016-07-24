@@ -1,6 +1,6 @@
 {
   "name": "cache-directory",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Find the proper cache directory based on operating system",
   "main": "index.js",
   "scripts": {
