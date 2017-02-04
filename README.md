@@ -1,5 +1,7 @@
 # `cache-directory`
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/strugee/node-cache-directory.svg)](https://greenkeeper.io/)
+
 Find the proper cache directory based on operating system
 
 ## Installation
