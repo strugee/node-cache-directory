@@ -16,7 +16,7 @@
 'use strict';
 
 var xdg = require('xdg-basedir');
-var home = require('user-home');
+var home = require('os').homedir();
 var path = require('path');
 
 function cacheDir(appName) {
