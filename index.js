@@ -19,8 +19,11 @@ var xdg = require('xdg-basedir');
 var home = require('os').homedir();
 var path = require('path');
 
-function cacheDir(appName) {
-	switch (process.platform) {
+function cacheDir(appName, opts) {
+	if (!opts) opts = {};
+	if (!opts.platform) opts.platform = process.platform;
+
+	switch (opts.platform) {
 	case 'win32':
 		return process.env.APPDATA ? path.join(process.env.APPDATA, appName, 'Caches') : null;
 	case 'darwin':

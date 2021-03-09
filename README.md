@@ -16,6 +16,14 @@ var cacheDir = require('cache-directory');
 console.log(cacheDir('myApp'));
 ```
 
+If you want, you can pass an optional options object to override the platform:
+
+```js
+var cacheDir = require('cache-directory');
+
+console.log(cacheDir('myApp', { platform: 'linux' }));
+```
+
 ## Caveats
 
 When run on OS X, `cache-directory` assumes it isn't run in a sandboxed process environment. If it is, it will probably break. Additionally, the app name is used instead of the [conventional][1] bundle identifier (for simplicity and because many `cache-directory` consumers won't necessarily _have_ a bundle identifier).
