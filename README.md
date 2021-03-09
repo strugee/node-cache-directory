@@ -30,6 +30,12 @@ When run on OS X, `cache-directory` assumes it isn't run in a sandboxed process 
 
 If a suitable cache directory can't be found, `cache-directory` will return `null`. You need to handle this case. A reasonable course of action would be to use a temp directory, for which you can use the [`cache-or-tmp-directory`][2] module.
 
+## Supported platforms
+
+* Windows
+* macOS
+* Linux
+
 ## License
 
 LGPL 3.0+
